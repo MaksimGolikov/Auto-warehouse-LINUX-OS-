@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{FC9590AF-AF95-4F08-932D-81E49B2ABB82}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Auto_Warehouse</RootNamespace>
+    <AssemblyName>Auto_Warehouse</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>glib-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>glade-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="Mono.Posix" />
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.3.1.9\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="gtk-gui\MainWindow.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\Add_Item_Window.cs" />
+    <Compile Include="gtk-gui\Auto_Warehouse.Add_Item_Window.cs" />
+    <Compile Include="Windows\Delete_Item_Window.cs" />
+    <Compile Include="gtk-gui\Auto_Warehouse.Delete_Item_Window.cs" />
+    <Compile Include="Windows\Change_Window.cs" />
+    <Compile Include="gtk-gui\Auto_Warehouse.Change_Window.cs" />
+    <Compile Include="Windows\Help_Window.cs" />
+    <Compile Include="gtk-gui\Auto_Warehouse.Help_Window.cs" />
+    <Compile Include="Windows\History_Window.cs" />
+    <Compile Include="gtk-gui\Auto_Warehouse.History_Window.cs" />
+    <Compile Include="Windows\Parametr_Window.cs" />
+    <Compile Include="gtk-gui\Auto_Warehouse.Parametr_Window.cs" />
+    <Compile Include="WorkWith_DataBase\ParametrFiltr.cs" />
+    <Compile Include="WorkWith_DataBase\ReadDB.cs" />
+    <Compile Include="WorkWith_DataBase\StructDataDeal.cs" />
+    <Compile Include="WorkWith_DataBase\StructOfProduct.cs" />
+    <Compile Include="WorkWith_DataBase\WriteTo_DB.cs" />
+    <Compile Include="WorkWith_Data\ListOf_Mode_ParamsWindow.cs" />
+    <Compile Include="WorkWith_Data\MessageBox.cs" />
+    <Compile Include="WorkWith_Data\Search.cs" />
+    <Compile Include="WorkWith_Data\Validation.cs" />
+    <Compile Include="WorkWith_Data\ReadFile.cs" />
+    <Compile Include="Windows\PasswordToBDWindow.cs" />
+    <Compile Include="gtk-gui\Auto_Warehouse.PasswordToBDWindow.cs" />
+    <Compile Include="WorkWith_Data\Bufer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Windows\" />
+    <Folder Include="WorkWith_DataBase\" />
+    <Folder Include="WorkWith_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

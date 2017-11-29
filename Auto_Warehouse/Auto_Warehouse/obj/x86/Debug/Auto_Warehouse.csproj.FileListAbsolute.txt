@@ -1,0 +1,2 @@
+F:\УНИВЕР\МАКСИМ\Институт\КУРСОВЫЕ\Курсовая шарп\Auto_Warehouse\Auto_Warehouse\obj\x86\Debug\Auto_Warehouse.exe
+F:\УНИВЕР\МАКСИМ\Институт\КУРСОВЫЕ\Курсовая шарп\Auto_Warehouse\Auto_Warehouse\obj\x86\Debug\Auto_Warehouse.csprojResolveAssemblyReference.cache

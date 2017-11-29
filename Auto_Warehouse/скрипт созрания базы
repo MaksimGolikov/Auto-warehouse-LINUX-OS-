@@ -1,0 +1,81 @@
+CREATE DATABASE "Wharehouser"
+  WITH OWNER = postgres
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'en_US.UTF-8'
+       LC_CTYPE = 'en_US.UTF-8'
+       CONNECTION LIMIT = -1;
+
+
+CREATE TABLE public.change_t
+(
+  id_change integer NOT NULL DEFAULT nextval('change_t_id_change_seq'::regclass),
+  id_product_name integer,
+  count_value integer,
+  id_type_count integer,
+  price text,
+  data_wrote text,
+  name_document text,
+  number_document text,
+  data_document text,
+  wherehouser text,
+  CONSTRAINT change_t_pkey PRIMARY KEY (id_change)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.change_t
+  OWNER TO postgres;
+
+
+
+
+CREATE TABLE public.producer_t
+(
+  id_producer integer NOT NULL DEFAULT nextval('producer_t_id_producer_seq'::regclass),
+  producer_name text,
+  CONSTRAINT producer_t_pkey PRIMARY KEY (id_producer)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.producer_t
+  OWNER TO postgres;
+
+
+
+CREATE TABLE public.product_t
+(
+  id_product integer NOT NULL DEFAULT nextval('product_t_id_product_seq'::regclass),
+  code text,
+  id_producer integer,
+  name_product text,
+  id_type_counter integer,
+  price_for_one numeric,
+  parametr text,
+  parametr_value text,
+  count_value integer,
+  CONSTRAINT product_t_pkey PRIMARY KEY (id_product)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.product_t
+  OWNER TO postgres;
+
+
+CREATE TABLE public.type_counting_t
+(
+  id_type_counting integer NOT NULL DEFAULT nextval('type_counting_t_id_type_counting_seq'::regclass),
+  type_counting_name text,
+  CONSTRAINT type_counting_t_pkey PRIMARY KEY (id_type_counting)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.type_counting_t
+  OWNER TO postgres;
+
+
+
+

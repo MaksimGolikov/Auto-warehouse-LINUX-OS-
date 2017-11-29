@@ -1,0 +1,7 @@
+/home/max/Documents/Auto_Warehouse/Auto_Warehouse/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/max/Documents/Auto_Warehouse/Auto_Warehouse/obj/x86/Debug/Auto_Warehouse.gtk-gui.gui.stetic
+/home/max/Documents/Auto_Warehouse/Auto_Warehouse/bin/Debug/Auto_Warehouse.exe.mdb
+/home/max/Documents/Auto_Warehouse/Auto_Warehouse/bin/Debug/Auto_Warehouse.exe
+/home/max/Documents/Auto_Warehouse/Auto_Warehouse/obj/x86/Debug/Auto_Warehouse.exe
+/home/max/Documents/Auto_Warehouse/Auto_Warehouse/obj/x86/Debug/Auto_Warehouse.exe.mdb
+/home/max/Documents/Auto_Warehouse/Auto_Warehouse/bin/Debug/Npgsql.dll
